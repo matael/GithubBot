@@ -3,6 +3,9 @@
 use GithubBot;
 
 my $bot = GithubBot->new(
+	# GH
+	user => 'gh_user',
+	repo => 'gh_repo',
 	# IRC
 	server => "irc.freenode.org",
 	port => 7000,

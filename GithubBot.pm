@@ -21,13 +21,13 @@ sub said {
 		if (defined $1) {
 			$default_params{labels} = $1;
 			$issues = $issues_api->repos_issues(
-				'haum',
-				'haum_internal',
+				$self->{user},
+				$self->{repo},
 				\%default_params);
 		} else {
 			$issues = $issues_api->repos_issues(
-				'haum',
-				'haum_internal',
+				$self->{user},
+				$self->{repo},
 				\%default_params);
 		}
 	}
