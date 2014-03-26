@@ -12,7 +12,7 @@ sub said {
 	my ($self,$msg) = @_;
 
 	my $issues;
-	if ( $msg->{body} =~ /^\@todolist\s?(.)?$/) {
+	if ( $msg->{body} =~ /^\@todolist\s?(.+)?$/) {
 
 		my $gh = Net::GitHub::V3->new;
 		my $issues_api = $gh->issue;
